@@ -19,7 +19,7 @@ public class KuduSinkTest {
     @Test
     public void test1() throws Exception {
         Properties props = new Properties();
-        props.setProperty("bootstrap.servers", "197.255.20.213:9092");
+        props.setProperty("bootstrap.servers", "localhost:9092");
         props.setProperty("group.id", "flink_1");
         StreamExecutionEnvironment ENV =
                 StreamExecutionEnvironment.getExecutionEnvironment();
