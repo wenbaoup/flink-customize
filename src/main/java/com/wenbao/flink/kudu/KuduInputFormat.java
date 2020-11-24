@@ -16,9 +16,7 @@
  */
 package com.wenbao.flink.kudu;
 
-import com.wenbao.flink.connectors.kudu.connector.*;
 import com.wenbao.flink.kudu.connector.*;
-import com.wenbao.sink.flink.connectors.kudu.connector.*;
 import org.apache.flink.api.common.io.LocatableInputSplitAssigner;
 import org.apache.flink.api.common.io.RichInputFormat;
 import org.apache.flink.api.common.io.statistics.BaseStatistics;
@@ -39,6 +37,7 @@ import java.util.List;
 
 public class KuduInputFormat extends RichInputFormat<KuduRow, KuduInputFormat.KuduInputSplit> {
 
+    private static final long serialVersionUID = 3262080936460631267L;
     private String kuduMasters;
     private KuduTableInfo tableInfo;
     private List<KuduFilterInfo> tableFilters;
