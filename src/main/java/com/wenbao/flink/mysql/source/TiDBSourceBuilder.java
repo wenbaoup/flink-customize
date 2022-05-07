@@ -252,7 +252,7 @@ public class TiDBSourceBuilder implements Serializable {
     private void sendDeleteData(Collector<RowData> collector, CanalJsonEvent canalJsonEvent,
             String data,
             String old, String insert) {
-        // ndc发送delete的和ticdc发送的delete不一样
+        // 兼容delete数据在old中的情况
         if (data != null) {
             collector.collect(
                     schema.kafkaDataConvert(
